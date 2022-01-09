@@ -24,8 +24,8 @@ def read_sensor(sensor, label):
 if __name__ == '__main__':
     # Start up the server to expose the metrics.
     start_http_server(9101)
-    dhtDevice1 = adafruit_dht.DHT22(board.D4)
-    dhtDevice2 = adafruit_dht.DHT22(board.D22)
+    dhtDevice1 = adafruit_dht.DHT22(board.D4, use_pulseio=False)
+    dhtDevice2 = adafruit_dht.DHT22(board.D22, use_pulseio=False)
 
     while True:
         read_sensor(dhtDevice1, 'sensor1')
