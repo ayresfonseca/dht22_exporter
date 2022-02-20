@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dht22-exporter"
+version = "0.1.0"
+description = "DHT22 Prometheus Exporter"
+authors = ["Ayres Fonseca <ayres.fonseca@yahoo.ca>"]
+license = "GPL v3.0"
+readme = "README.md"
+packages = [{include = "dht22_exporter"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+prometheus-client = "^0.13.1"
+adafruit-circuitpython-dht = "^3.7.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
